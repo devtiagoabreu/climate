@@ -21,6 +21,18 @@ window.addEventListener('load', ()=> {
 
             const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=pt&units=metric&appid=${apikey_openweathermap}`
             
+            fetch(url)
+                .then( response => { 
+                    return response.json() 
+                })
+                .then(  data => {
+                    let tempValor = Math.round(data.main.temp)
+                    
+                    temperaturaValor.textContent = `${tempValor} °C`
+                } )
+                .catch( error => {
+                    console.log(error)
+                } )
            
         } )
     }
