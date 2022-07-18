@@ -30,6 +30,8 @@ window.addEventListener('load', ()=> {
                     let tempDescricao = data.weather[0].description
                     let local = data.name
                     let velVento = data.wind.speed
+                    const staticInconUrl = `http://openweathermap.org/img/wn/${staticIconCode}.png`
+                    console.log(staticInconUrl)
                     
                     temperaturaValor.textContent = `${tempValor} °C`
                     temperaturaDescricao.textContent =  tempDescricao.toUpperCase()
