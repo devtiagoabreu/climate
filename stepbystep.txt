@@ -1,0 +1,17 @@
+exemplos: 
+método geolocalização Geolocation.getCurrentPosition() :
+https://developer.mozilla.org/pt-BR/docs/Web/API/Geolocation/getCurrentPosition
+
+API call:
+https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+
+
+Links úteis: 
+bibliotecas de APIs: https://rapidapi.com/worldapi/api/open-weather13/
+API: https://openweathermap.org/current#geo --> latitude e longitude
+https://openweathermap.org/current#name --> nome da cidade
+
+
+ícones de clima: 
+https://www.amcharts.com/free-animated-svg-weather-icons/
+Descompacte na pasta do projeto a pasta animated (caso queira ícones animados)

@@ -1,3 +1,9 @@
+#ignore estes arquivos
+varApp.js
+
+
+
+
 # Logs
 logs
 *.log
