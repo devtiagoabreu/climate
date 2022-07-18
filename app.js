@@ -19,6 +19,7 @@ window.addEventListener('load', ()=> {
             latitude = position.coords.latitude
             longitude = position.coords.longitude
 
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=pt&units=metric&appid=${apikey_openweathermap}`
             
            
         } )
