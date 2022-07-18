@@ -1,3 +1,5 @@
+import { apikey_openweathermap } from './varApp.js'
+
 window.addEventListener('load', ()=> {  
     
     let latitude
