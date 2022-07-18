@@ -30,13 +30,44 @@ window.addEventListener('load', ()=> {
                     let tempDescricao = data.weather[0].description
                     let local = data.name
                     let velVento = data.wind.speed
-                    const staticInconUrl = `http://openweathermap.org/img/wn/${staticIconCode}.png`
-                    console.log(staticInconUrl)
-                    
+                                        
                     temperaturaValor.textContent = `${tempValor} °C`
                     temperaturaDescricao.textContent =  tempDescricao.toUpperCase()
                     localizacao.textContent = local
                     velocidadeVento.textContent = `${velVento} m/s`
+
+                    //icones estáticos
+                    //let staticIconCode = data.weather[0].icon
+                    //const staticInconUrl = `http://openweathermap.org/img/wn/${staticIconCode}.png`
+                    //console.log(staticInconUrl)
+
+                    //icones animados
+                    switch (data.weather[0].main) {
+                        case 'Clear':
+                            iconeAnimado.src = './animated/day.svg'
+                            break;
+                        case 'Clouds':
+                            iconeAnimado.src = './animated/cloudy-day-1.svg'
+                            break;
+                        case 'Thunderstorm':
+                            iconeAnimado.src = './animated/thunder.svg'
+                            break;
+                        case 'Drizzle':
+                            iconeAnimado.src = './animated/rainy-2.svg'
+                            break;
+                        case 'Rain':
+                            iconeAnimado.src = './animated/rainy-7.svg'
+                            break;
+                        case 'Snow':
+                            iconeAnimado.src = './animated/snowy-6.svg'
+                            break;
+                        case 'Atmosphere':
+                            iconeAnimado.src = './animated/weather.svg'
+                            break;
+                    
+                        default:
+                            break;
+                    }
 
                 } )
                 .catch( error => {
