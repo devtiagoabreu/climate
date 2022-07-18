@@ -41,13 +41,12 @@ body {
 }
 
 #cardB {
-    background-color: rgba(230, 50, 185, 0.63);
+    background-color: rgba(240, 137, 214, 0.671);
     color: azure;
 }
 
 #cardC {
-    background-color: rgba(0, 0, 0, 0.637);
-    color: rgba(61, 135, 245, 0.651);
+    background-color: rgba(61, 135, 245, 0.651);
+    color: azure;
 }
-
 
