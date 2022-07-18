@@ -15,3 +15,10 @@ https://openweathermap.org/current#name --> nome da cidade
 ícones de clima: 
 https://www.amcharts.com/free-animated-svg-weather-icons/
 Descompacte na pasta do projeto a pasta animated (caso queira ícones animados)
+
+fontes:
+https://fonts.google.com/specimen/Roboto
+
+
+uigradients:
+https://uigradients.com/#Maldives
