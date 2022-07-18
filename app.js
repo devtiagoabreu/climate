@@ -27,8 +27,11 @@ window.addEventListener('load', ()=> {
                 })
                 .then(  data => {
                     let tempValor = Math.round(data.main.temp)
+                    let tempDescricao = data.weather[0].description
                     
                     temperaturaValor.textContent = `${tempValor} °C`
+                    temperaturaDescricao.textContent =  tempDescricao.toUpperCase()
+
                 } )
                 .catch( error => {
                     console.log(error)
