@@ -19,9 +19,9 @@ window.addEventListener('load', ()=> {
             latitude = position.coords.latitude
             longitude = position.coords.longitude
 
-            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=pt&units=metric&appid=${apikey_openweathermap}`
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=en&units=metric&appid=${apikey_openweathermap}`
             
-            fetch(url)
+            fetch(url) 
                 .then( response => { 
                     return response.json() 
                 })
@@ -36,10 +36,12 @@ window.addEventListener('load', ()=> {
                     localizacao.textContent = local
                     velocidadeVento.textContent = `${velVento} m/s`
 
+                    /*
                     //icones estáticos
-                    //let staticIconCode = data.weather[0].icon
-                    //const staticInconUrl = `http://openweathermap.org/img/wn/${staticIconCode}.png`
-                    //console.log(staticInconUrl)
+                    let staticIconCode = data.weather[0].icon
+                    const staticInconUrl = `http://openweathermap.org/img/wn/${staticIconCode}.png`
+                    console.log(staticInconUrl)
+                    */
 
                     //icones animados
                     switch (data.weather[0].main) {
@@ -73,7 +75,7 @@ window.addEventListener('load', ()=> {
                 .catch( error => {
                     console.log(error)
                 } )
-           
+                       
         } )
     }
 })
