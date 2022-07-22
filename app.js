@@ -12,6 +12,21 @@ window.addEventListener('load', ()=> {
     let iconeAnimado = document.getElementById('iconeAnimado')
 
     let velocidadeVento = document.getElementById('velocidadeVento')
+
+    let horaHtml = document.getElementById('hora')
+    let minutoHtml = document.getElementById('minuto')
+    let segundoHtml = document.getElementById('segundo')
+
+    const mostrarHora = () => {
+        let data = new Date()
+        horaHtml.textContent = String(data.getHours()).padStart(2, "0")
+        minutoHtml.textContent = String(data.getMinutes()).padStart(2, "0")
+        segundoHtml.textContent = String(data.getSeconds()).padStart(2, "0")
+
+        setTimeout(mostrarHora, 1000)
+    }
+
+    mostrarHora()
     
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition( position => {
@@ -78,4 +93,5 @@ window.addEventListener('load', ()=> {
                        
         } )
     }
+    
 })
